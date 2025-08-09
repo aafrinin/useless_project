@@ -1,17 +1,57 @@
 
 PROJECT NAME
 
-# Bolo Thararara 🍃🍛
+Bolo Tharara 🎯
+Basic Details
+Team Name: Pluto!
+Team Members:
 
-**Tagline:** mone korach chor idatte?
+Team Member 1:Aafrin Fathima — Ilahia college of engineering and technology,muvatupuzha
+Team Member 2 : Fathima Farhana K N —Ilahia college of engineering and technology,muvatupuzha 
 
-**Oru quick intro**
-Oru ela koduthu,full sadya ready — Bolo Thararara ai powered fun tool aanu. Upload a photo of a banana leaf (or any ela — jackfruit, mango, or even roadside ella), and our little AI-ish script will place rice, sambar, payasam, pappadam and the rest in their proper spots. 😆
+Project Description
+Bolo Tharara is a website that precisely positions each dish on a banana leaf in the authentic way a Sadya should be served — just like the pros do it.
 
-**Features (MVP):**
-- Simple leaf detection using OpenCV (HSV + contour).
-- Paste transparent PNG food assets at relative positions.
-- Portion modes: *Mr Ponjikkara* / *stingy* / *normal*.
-- Export shareable image.
+The Problem (that doesn't exist)
+Not everyone has the time, skill, or chef-like patience to know the rules and arrange a perfect Sadya on a banana leaf.
 
-**Project layout**
+The Solution (that nobody asked for)
+Upload a leaf photo, and Bolo Tharara magically fills it with traditional dishes positioned perfectly! Choose your mode —
+Mr. Ponjikkara (the generous host) or Diet Chettan (probably cuts the payasam). Because why not?
+
+Technical Details
+Technologies/Components Used
+For Software:
+Languages: HTML, CSS, JavaScript, Python
+Frameworks: Flask
+Libraries: NumPy, Scikit-learn, TensorFlow, Keras
+Tools:
+
+For Hardware:
+None (fully web-based)
+
+Implementation
+
+
+
+
+Project Documentation
+Screenshots
+
+
+
+
+
+
+
+Project Demo
+Video
+[Demo Video Link Here]
+Watch Bolo Tharara transform a plain banana leaf into a beautifully arranged Sadya.
+
+Team Contributions
+Aafrin Fathima: Backend development,AI Model Training,AI Model Integration
+
+Fathima Farhana K N: Frontend development, UI/UX design, Dish image sourcing,documentation
+
+Made with 💖 at TinkerHub Useless Projects
