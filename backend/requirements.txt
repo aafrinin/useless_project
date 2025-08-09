@@ -2,3 +2,7 @@ flask
 pillow
 opencv-python
 numpy
+torch
+flask-cors
+scikit-learn
+torchvision
