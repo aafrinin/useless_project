@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bolo Thararara - Mr. Ponjikkara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Sans+Malayalam:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #fffaf5 0%, #d1e7dd 100%);
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+    }
+    .tagline {
+      font-family: 'Noto Sans Malayalam', sans-serif;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen items-center p-6">
+
+  <!-- Header -->
+  <header class="text-center mt-10 mb-10">
+    <h1 class="text-6xl text-green-800 mb-2">Bolo Thararara</h1>
+    <p class="tagline text-2xl text-pink-700 mb-4">മോനെ കുറച്ചു ചോറ് ഇടട്ടെ</p>
+  </header>
+
+  <!-- Description -->
+  <section class="max-w-xl bg-green-50 rounded-2xl p-6 mb-8 text-center shadow-md">
+    <h2 class="text-3xl font-bold text-green-900 mb-4">Mr. Ponjikkara's Generous Feast 🍛</h2>
+    <p class="text-gray-700 text-lg">
+      When it comes to sadya, Ponjikkara means mountains of rice, overflowing curries, and more banana leaf real estate than you bargained for!  
+      Prepare your appetite — no complaints about second helpings here. 😄
+    </p>
+  </section>
+
+  <!-- Image Upload -->
+  <section class="w-full max-w-md text-center">
+    <label for="leafUpload" class="block mb-4 font-semibold text-green-800 cursor-pointer border-2 border-green-700 rounded-lg py-3 px-6 hover:bg-green-700 hover:text-white transition">
+      Upload your banana leaf pic 📸
+    </label>
+    <input type="file" id="leafUpload" accept="image/*" class="hidden" />
+
+    <p id="uploadMsg" class="mt-6 text-green-900 font-semibold"></p>
+  </section>
+
+  <!-- Back to Home -->
+  <footer class="mt-auto mb-6">
+    <a href="index.html" class="text-pink-700 hover:underline font-semibold">← Back to Home</a>
+  </footer>
+
+  <script>
+    const uploadInput = document.getElementById('leafUpload');
+    const uploadMsg = document.getElementById('uploadMsg');
+
+    uploadInput.addEventListener('change', () => {
+      if (uploadInput.files.length > 0) {
+        uploadMsg.textContent = "Showing Sadya, no change — eat as you like! 🍽✨";
+
+        // Redirect to output page after 2 seconds
+        setTimeout(() => {
+          window.location.href = 'ponjikkara-output.html';
+        }, 2000);
+      }
+    });
+  </script>
+
+</body>
+</html>
