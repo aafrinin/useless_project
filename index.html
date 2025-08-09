@@ -1,9 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Useless Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolo Thararara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&family=Noto+Sans+Malayalam:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #FFF8F0; /* pastel beige */
+      font-family: 'Nunito', sans-serif;
+      background-image: url('https://i.ibb.co/4T9gGfS/onam-floral.png');
+      background-size: 180px;
+      background-repeat: repeat;
+      background-blend-mode: lighten;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+    }
+    .tagline {
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      color: #D97706; /* payasam gold */
+    }
+    .card {
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      border-color: #FBBF24; /* soft golden border on hover */
+      transform: translateY(-4px);
+    }
+  </style>
 </head>
-<body>
-  <h1>My Useless Project 🚀</h1>
+<body class="flex flex-col items-center min-h-screen p-6">
+
+  <!-- Header -->
+  <header class="text-center mt-12">
+    <h1 class="text-6xl text-green-800">Bolo Thararara 🎶</h1>
+    <p class="tagline text-2xl mt-2">മോനെ കുറച്ചു ചോറ് ഇടട്ടെ 🍚</p>
+    <p class="max-w-lg text-gray-700 mt-4 leading-relaxed">
+      We take your banana leaf pic and place every curry, payasam, and pickle exactly where  
+      they belong – AI meets Ammamma’s OCD.
+    </p>
+  </header>
+
+  <!-- Mode Selection -->
+  <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+
+    <!-- Mr. Ponjikkara -->
+    <div class="card bg-green-50 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl">
+      <h2 class="text-2xl text-green-800 font-bold mb-3">Mr. Ponjikkara 🍛</h2>
+      <p class="text-gray-600 mb-4">
+        He doesn’t understand the word “enough.” Expect  
+        food so loaded, you’ll need moral support to finish.
+      </p>
+      <a href="ponjikkara.html" class="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">
+        Choose Feast Mode
+      </a>
+    </div>
+
+    <!-- Diet Chettan -->
+    <div class="card bg-yellow-50 rounded-2xl shadow-lg p-6 text-center hover:shadow-xl">
+      <h2 class="text-2xl text-yellow-800 font-bold mb-3">Diet Chettan 🥄</h2>
+      <p class="text-gray-600 mb-4">
+        The sadya where he cuts your payasam “just to taste”  
+        and still asks you to smile for the photo.
+      </p>
+      <a href="stingy.html" class="inline-block bg-yellow-600 text-white px-6 py-2 rounded-full hover:bg-yellow-700 transition">
+        Choose Diet Mode
+      </a>
+    </div>
+
+  </section>
+
 </body>
 </html>
