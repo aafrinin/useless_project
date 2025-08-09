@@ -42,8 +42,8 @@
     
     <!-- Mr. Ponjikkara -->
     <div class="bg-green-50 rounded-2xl p-6 text-center card-hover transition cursor-pointer"
-         onclick="window.location.href='ponjikkara.html'">
-      <img src="C:\Users\Aafrin\Documents\PROJECTS\Useless Project\static\images\ponjikkara.jpg" alt="Ponji" class="w-24 h-24 mx-auto mb-4" />
+         onclick="window.location.href='{{ url_for('ponjikkara') }}'">
+      <img src="{{ url_for('static', filename='images/ponjikkara.jpg') }}" alt="Ponji" class="w-24 h-24 mx-auto mb-4" />
       <h2 class="text-2xl text-green-900 font-bold mb-2">Mr. Ponjikkara 🍛</h2>
       <p class="text-gray-600">
         Who doesn’t know what “enough” means — your banana leaf will be loaded like a wedding feast.
@@ -52,8 +52,8 @@
 
     <!-- Diet Chettan -->
     <div class="bg-yellow-50 rounded-2xl p-6 text-center card-hover transition cursor-pointer"
-         onclick="window.location.href='dietchettan.html'">
-      <img src="C:\Users\Aafrin\Documents\PROJECTS\Useless Project\static\images\dietchettan.jpg" alt="Diet Chettan" class="w-24 h-24 mx-auto mb-4" />
+         onclick="window.location.href='{{ url_for('dietchettan') }}'">
+      <img src="{{ url_for('static', filename='images/dietchettan.jpg') }}" alt="Diet Chettan" class="w-24 h-24 mx-auto mb-4" />
       <h2 class="text-2xl text-yellow-900 font-bold mb-2">Diet Chettan 🥄</h2>
       <p class="text-gray-600">
         Probably tells you to skip payasam — and might count your pickle pieces too.

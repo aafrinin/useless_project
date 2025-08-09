@@ -55,7 +55,7 @@
 
   <!-- Back to Home -->
   <footer class="mt-auto mb-6">
-    <a href="index.html" class="text-pink-700 hover:underline font-semibold">← Back to Home</a>
+    <a href="{{ url_for('index') }}" class="text-pink-700 hover:underline font-semibold">← Back to Home</a>
   </footer>
 
   <script>
@@ -68,7 +68,7 @@
 
         // Redirect to output page after 2 seconds
         setTimeout(() => {
-          window.location.href = 'dietchettan-output.html';
+          window.location.href = "{{ url_for('dietchettan_output') }}";
         }, 2000);
       }
     });

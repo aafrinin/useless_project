@@ -4,7 +4,7 @@ from torch import nn
 from torchvision import transforms
 from PIL import Image
 
-# Define the CNN model as in training
+# --- Model definition ---
 class SimpleCNN(nn.Module):
     def __init__(self):
         super().__init__()
@@ -18,50 +18,45 @@ class SimpleCNN(nn.Module):
         x = self.fc(x)
         return x
 
-def load_model(path=r"C:\Users\Aafrin\Documents\PROJECTS\Useless Project\backend\dataset\leaf_detector_model.pt"):
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Model file not found at {path}")
+# --- Load trained model ---
+def load_model(model_path="dataset/leaf_detector_model.pt"):
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"Model file not found at {model_path}")
     model = SimpleCNN()
-    model.load_state_dict(torch.load(path, map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
     model.eval()
     return model
 
+# --- Preprocess image ---
 def preprocess_image(image_path):
     if not os.path.exists(image_path):
-        raise FileNotFoundError(f"Test image not found at {image_path}")
+        raise FileNotFoundError(f"Image not found at {image_path}")
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
-        transforms.ToTensor(),
+        transforms.ToTensor()
     ])
-    img = Image.open(image_path).convert('RGB')
+    img = Image.open(image_path).convert("RGB")
     return transform(img).unsqueeze(0)
 
-def predict_leaf(model, img_tensor):
-    with torch.no_grad():
-        output = model(img_tensor)  # shape [1, 10]
-        probs = torch.softmax(output, dim=1)
-        predicted_class = torch.argmax(probs, dim=1).item()
-        return predicted_class == 1  # assuming class '1' means leaf detected
-
-def get_sadhya_menu():
-    return [
-        "Rice", "Sambar", "Parippu", "Avial", "Thoran",
-        "Olan", "Kalan", "Pachadi", "Erissery",
-        "Pickle", "Banana chips", "Papadam", "Payasam"
-    ]
-
-def main(image_path):
+# --- Predict leaf ---
+def predict_leaf_dishes(image_path):
     model = load_model()
     img_tensor = preprocess_image(image_path)
-    if predict_leaf(model, img_tensor):
-        print("Leaf detected! Here's your Sadhya menu:")
-        for dish in get_sadhya_menu():
-            print("-", dish)
+
+    with torch.no_grad():
+        output = model(img_tensor)
+        probs = torch.softmax(output, dim=1)
+        predicted_class = torch.argmax(probs, dim=1).item()
+
+    if predicted_class == 1:  # assuming class 1 = leaf
+        # Example dish positions (replace with actual inference if available)
+        return {
+            "dishes": [
+                {"name": "Parippu", "x": 100, "y": 50},
+                {"name": "Sambar", "x": 150, "y": 100},
+                {"name": "Avial", "x": 200, "y": 150},
+                {"name": "Payasam", "x": 250, "y": 200}
+            ]
+        }
     else:
-        print("No leaf detected.")
-
-if __name__ == "__main__":
-    # Update this path to your actual test image location
-    test_image_path = r"C:\Users\Aafrin\Documents\PROJECTS\Useless Project\backend\dataset\test_leaf_image.jpg"
-    main(test_image_path)
-
+        return {"dishes": []}
