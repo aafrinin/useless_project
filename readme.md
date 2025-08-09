@@ -29,10 +29,6 @@ None (fully web-based)
 
 Implementation
 
-
-
-
-Project Documentation
 Start
   |
   v
@@ -56,6 +52,9 @@ Option to Restart or Exit
   |
   v
 End
+
+Project Documentation
+https://drive.google.com/drive/folders/1AiRwfOd-BQPJpgQTgk0BqHvXpAjr1L4T
 Team Contributions
 Aafrin Fathima: Backend development,AI Model Training,AI Model Integration
 
