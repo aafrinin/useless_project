@@ -1,11 +1,8 @@
 
-PROJECT NAME
-
-Bolo Tharara 🎯
+PROJECT NAME:Bolo Tharara 🎯
 Basic Details
 Team Name: Pluto!
 Team Members:
-
 Team Member 1:Aafrin Fathima — Ilahia college of engineering and technology,muvatupuzha
 Team Member 2 : Fathima Farhana K N —Ilahia college of engineering and technology,muvatupuzha 
 
@@ -25,7 +22,7 @@ For Software:
 Languages: HTML, CSS, JavaScript, Python
 Frameworks: Flask
 Libraries: NumPy, Scikit-learn, TensorFlow, Keras
-Tools:
+Tools:Kaggle,opensource(for model training)
 
 For Hardware:
 None (fully web-based)
@@ -36,19 +33,29 @@ Implementation
 
 
 Project Documentation
-Screenshots
-
-
-
-
-
-
-
-Project Demo
-Video
-[Demo Video Link Here]
-Watch Bolo Tharara transform a plain banana leaf into a beautifully arranged Sadya.
-
+Start
+  |
+  v
+Open App: Choose Sadhya Mode
+  |------------------------------|
+  |                              |
+Mr Ponjikkara Mode           Dietician Mode
+  |                              |
+  v                              v
+Upload Leaf Image           Upload Leaf Image
+  |                              |
+  v                              v
+Analyze Leaf Image          Analyze Leaf Image
+  |                              |
+  v                              v
+Show Sadhya Menu            Show Dietician Sadhya Menu
+Based on Mode & Leaf       Based on Mode & Leaf
+  |                              |
+  v                              v
+Option to Restart or Exit
+  |
+  v
+End
 Team Contributions
 Aafrin Fathima: Backend development,AI Model Training,AI Model Integration
 
